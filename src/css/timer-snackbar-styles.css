@@ -1,0 +1,99 @@
+/* Timer area styling */
+.timer-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .datetime-picker {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .datetime-picker input {
+    height: 40px;
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+  }
+  
+  .datetime-picker button {
+    padding: 10px 20px;
+    background-color: #4E75FF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .datetime-picker button:hover {
+    background-color: #6C8CFF;
+  }
+  
+  .timer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+  
+  .timer .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timer .value {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2e2f42;
+  }
+  
+  .timer .label {
+    font-size: 14px;
+    color: #808080;
+  }
+  
+  /* Snackbar form styling */
+  form.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 360px;
+    margin: 50px auto;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  form.form label {
+    font-size: 16px;
+    color: #2e2f42;
+  }
+  
+  form.form input[type="number"],
+  form.form input[type="radio"] {
+    margin-top: 5px;
+  }
+  
+  form.form button {
+    padding: 10px;
+    background-color: #4E75FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  form.form button:hover {
+    background-color: #6C8CFF;
+  }
+  
