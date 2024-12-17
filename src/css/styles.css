@@ -9,7 +9,6 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
-@import url('./gallery.css');
 
 /* Sections style */
 @import url('./header.css');
@@ -18,4 +17,5 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 
-
+/* task home*/
+@import url('./gallery.css');
