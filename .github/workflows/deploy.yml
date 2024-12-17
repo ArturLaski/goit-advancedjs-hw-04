@@ -3,29 +3,29 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Uruchamia workflow po wypchnięciu zmian do gałęzi main
+      - main
 
 permissions:
-  contents: write  # Uprawnienia do zapisu w repozytorium
+  contents: write
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # System operacyjny, na którym uruchamiany jest workflow
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3  # Pobiera kod źródłowy z repozytorium
+        uses: actions/checkout@v3
 
       - name: Install Dependencies
-        run: npm install  # Instalacja zależności
+        run: npm install
 
       - name: Build Project
-        run: npm run build  # Budowanie projektu (generuje pliki do folderu dist)
+        run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.1.0  # Akcja do wdrożenia na GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4  # Użycie najnowszej wersji
         with:
-          branch: gh-pages  # Gałąź, na którą mają być wypchnięte pliki
-          folder: dist  # Folder zawierający zbudowane pliki
-          clean: true  # Usuwa stare pliki z gałęzi gh-pages
-          token: ${{ secrets.GH_PAT }}  # Sekret z tokenem PAT do autoryzacji
+          branch: gh-pages
+          folder: dist
+          clean: true
+          token: ${{ secrets.GH_PAT }}
