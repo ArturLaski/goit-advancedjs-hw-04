@@ -9,10 +9,7 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
-@import url('./gallery-styles.css');
-@import url('./form-styles.css');
-@import url('./timer-snackbar-styles.css');
-
+@import url('./gallery.css');
 
 /* Sections style */
 @import url('./header.css');
@@ -20,4 +17,5 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
 
