@@ -48,10 +48,10 @@ function loadSimpleLitebox(cartItem, append) {
   const gallery = document.querySelector('ul.images-div');
 
   if (append) {
-    // Dodanie nowych elementów na koniec listy
+    // Dokładamy nowe elementy do istniejącej galerii
     gallery.insertAdjacentHTML('beforeend', cartItem);
   } else {
-    // Nadpisanie galerii nowymi elementami
+    // Zastępujemy istniejącą galerię nowymi elementami
     gallery.innerHTML = cartItem;
   }
 
