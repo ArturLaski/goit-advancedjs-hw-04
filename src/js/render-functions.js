@@ -1,10 +1,9 @@
-
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 let galleryLightbox;
 
-function createCardsMarkup(cards) {
+function createCardsMarkup(cards, append = false) {
   const cartItem = cards
     .map(
       ({
@@ -42,13 +41,21 @@ function createCardsMarkup(cards) {
     )
     .join('');
 
-  loadSimpleLitebox(cartItem);
+  loadSimpleLitebox(cartItem, append);
 }
 
-function loadSimpleLitebox(cartItem) {
+function loadSimpleLitebox(cartItem, append) {
   const gallery = document.querySelector('ul.images-div');
-  gallery.innerHTML = cartItem;
 
+  if (append) {
+    // Dodanie nowych elementów na koniec listy
+    gallery.insertAdjacentHTML('beforeend', cartItem);
+  } else {
+    // Nadpisanie galerii nowymi elementami
+    gallery.innerHTML = cartItem;
+  }
+
+  // Odświeżenie SimpleLightbox lub inicjalizacja
   if (galleryLightbox) {
     galleryLightbox.refresh();
   } else {

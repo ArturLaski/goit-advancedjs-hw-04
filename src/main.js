@@ -32,8 +32,7 @@ function handleSearch(evt) {
   if (searchValue === '') {
     iziToast.show({
       title: '❌',
-      message:
-        'Sorry, there are no images matching your search query. Please try again!',
+      message: 'Sorry, there are no images matching your search query. Please try again!',
       color: 'ef4040',
     });
     return;
@@ -50,8 +49,7 @@ function handleSearch(evt) {
         notFoundTextEl.innerHTML = `Results for query <span>${searchValue}</span> not found!`;
         iziToast.show({
           title: '❌',
-          message:
-            'Sorry, there are no images matching your search query. Please try again!',
+          message: 'Sorry, there are no images matching your search query. Please try again!',
           backgroundColor: '#ef4040',
           messageColor: 'white',
         });
@@ -59,6 +57,7 @@ function handleSearch(evt) {
       }
 
       createCardsMarkup(data.hits);
+
       if (data.totalHits > perPage) {
         loadMoreBtn.style.display = 'block'; // Pokaż Load More
       }
@@ -78,7 +77,7 @@ function handleLoadMore() {
 
   getImg(searchValue, currentPage, perPage)
     .then(data => {
-      createCardsMarkup(data.hits);
+      createCardsMarkup(data.hits, true); // Dodaj nowe zdjęcia, zamiast czyścić galerię
 
       const totalPages = Math.ceil(data.totalHits / perPage);
       if (currentPage >= totalPages) {
