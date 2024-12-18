@@ -197,3 +197,21 @@ img {
         transform: rotate(-360deg);
     }
 }
+
+.load-more {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4E75FF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .load-more:hover {
+    background-color: #6C8CFF;
+  }
+  
